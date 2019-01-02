@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="201dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:orientation="vertical">
 
@@ -47,23 +47,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:layout_marginBottom="100dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="Login" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="Don't have an account ? Create one" />
 
     </LinearLayout>
 
