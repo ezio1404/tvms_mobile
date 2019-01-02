@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
-        android:layout_height="263dp"
+        android:layout_height="389dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/tvms_logo" />
 
@@ -30,6 +30,7 @@
                 android:id="@+id/editText5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Firstname" />
@@ -110,7 +111,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="64dp"
                 android:orientation="horizontal">
 
                 <Button

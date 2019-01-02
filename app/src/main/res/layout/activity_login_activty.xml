@@ -10,12 +10,12 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="191dp"
+        android:layout_height="200dp"
         app:srcCompat="@drawable/tvms_logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="184dp"
         android:layout_marginTop="25dp"
         android:orientation="vertical">
 
@@ -53,7 +53,11 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
             android:layout_weight="1"
             android:text="Login" />
 
