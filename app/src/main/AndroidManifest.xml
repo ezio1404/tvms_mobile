@@ -23,7 +23,9 @@
         <activity android:name=".register" />
         <activity android:name=".inquiry" />
         <activity android:name=".violationRecord" />
-        <activity android:name=".settings"></activity>
+        <activity android:name=".settings" />
+        <activity android:name=".emergencyContact" />
+        <activity android:name=".vp"></activity>
     </application>
 
 </manifest>

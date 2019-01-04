@@ -1,6 +1,6 @@
 package com.example.administrator.tvms;
 
-import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +26,7 @@ public class LoginActivty extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private
+
 
     @Override
     public void onClick(View v) {
