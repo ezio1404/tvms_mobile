@@ -11,49 +11,75 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:padding="5dp"
         app:srcCompat="@drawable/tvms_logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
-        android:orientation="vertical">
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-        <EditText
-            android:id="@+id/username"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginRight="30dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Username"
-            tools:layout_editor_absoluteX="36dp"
-            tools:layout_editor_absoluteY="210dp" />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/password"
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Username"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="210dp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:text="Password"
-            tools:layout_editor_absoluteX="36dp"
-            tools:layout_editor_absoluteY="268dp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="Password"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="268dp" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="25dp"
@@ -65,7 +91,10 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Don't have an account ? Create one" />
 
     </LinearLayout>
