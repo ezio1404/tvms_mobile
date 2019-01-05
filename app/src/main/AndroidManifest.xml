@@ -24,8 +24,16 @@
         <activity android:name=".driverInquiry" />
         <activity android:name=".driverViolationRecord" />
         <activity android:name=".driverSettings" />
-        <activity android:name=".driverHotlinesandOffice" />
-        <activity android:name=".driverVP"></activity>
+        <activity android:name=".driverHao" />
+        <activity android:name=".driverVP" />
+        <activity android:name=".enforcerLogin" />
+        <activity android:name=".enforcerSettings" />
+        <activity android:name=".enforcerVP" />
+        <activity android:name=".enforcerHao" />
+        <activity
+            android:name=".enforcerNavigationDrawer"
+            android:label="@string/title_activity_enforcer_navigation_drawer"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

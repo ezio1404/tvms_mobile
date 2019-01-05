@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".driverSettings">
+    tools:context=".enforcerSettings">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -27,7 +27,6 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:paddingLeft="10dp"
-            android:paddingTop="10dp"
             android:paddingRight="10dp">
 
             <LinearLayout
@@ -148,5 +147,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>
