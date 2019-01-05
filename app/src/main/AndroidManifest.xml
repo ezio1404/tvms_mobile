@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivty">
+        <activity android:name=".driverLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,15 +17,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".navigationDrawer"
+            android:name=".driverNavigationDrawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".register" />
-        <activity android:name=".inquiry" />
-        <activity android:name=".violationRecord" />
-        <activity android:name=".settings" />
-        <activity android:name=".emergencyContact" />
-        <activity android:name=".vp"></activity>
+        <activity android:name=".driverRegister" />
+        <activity android:name=".driverInquiry" />
+        <activity android:name=".driverViolationRecord" />
+        <activity android:name=".driverSettings" />
+        <activity android:name=".driverHotlinesandOffice" />
+        <activity android:name=".driverVP"></activity>
     </application>
 
 </manifest>

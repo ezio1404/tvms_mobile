@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class LoginActivty extends AppCompatActivity implements View.OnClickListener {
+public class driverLogin extends AppCompatActivity implements View.OnClickListener {
 
     EditText username, password;
     Button login;
@@ -15,7 +15,7 @@ public class LoginActivty extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_activty);
+        setContentView(R.layout.driver_login);
 
         username= (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
@@ -31,7 +31,7 @@ public class LoginActivty extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v == login) {
-//            startActivity(new Intent(this, navigationDrawer.class));
+//            startActivity(new Intent(this, driverNavigationDrawer.class));
         }
     }
 }

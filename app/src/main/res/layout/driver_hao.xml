@@ -7,7 +7,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:orientation="vertical"
-    tools:context=".emergencyContact">
+    tools:context=".driverHotlinesandOffice">
 
     <LinearLayout
         android:layout_width="match_parent"
