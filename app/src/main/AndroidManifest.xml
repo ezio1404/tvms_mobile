@@ -33,7 +33,12 @@
         <activity
             android:name=".enforcerNavigationDrawer"
             android:label="@string/title_activity_enforcer_navigation_drawer"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".driverHomepage" />
+        <activity android:name=".driverDhp" />
+        <activity android:name=".enforcerHomepage" />
+        <activity android:name=".enforcerDhp" />
+        <activity android:name=".enforcerViolator"></activity>
     </application>
 
 </manifest>
