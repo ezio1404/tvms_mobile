@@ -1,5 +1,6 @@
 package com.example.administrator.tvms;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -79,21 +80,25 @@ public class enforcerNavigationDrawer extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_inquire) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent i = new Intent(enforcerNavigationDrawer.this,enforcerInquiry.class);
+            startActivity(i);
+        } else if (id == R.id.nav_violator) {
+            Intent i = new Intent(enforcerNavigationDrawer.this,enforcerViolator.class);
+            startActivity(i);
+        } else if (id == R.id.nav_vp) {
+            Intent i = new Intent(enforcerNavigationDrawer.this,enforcerVP.class);
+            startActivity(i);
+        } else if (id == R.id.nav_eh) {
+            Intent i = new Intent(enforcerNavigationDrawer.this,enforcerHao.class);
+            startActivity(i);
+        } else if (id == R.id.nav_settings) {
+            Intent i = new Intent(enforcerNavigationDrawer.this,enforcerSettings.class);
+            startActivity(i);
+        } else if (id == R.id.nav_faqs) {
+            //no driver faqs
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

@@ -1,8 +1,9 @@
 package com.example.administrator.tvms;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -80,18 +81,24 @@ public class driverNavigationDrawer extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_inquire) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent i = new Intent(driverNavigationDrawer.this,driverInquiry.class);
+            startActivity(i);
+        } else if (id == R.id.nav_vr) {
+            Intent i = new Intent(driverNavigationDrawer.this,driverViolationRecord.class);
+            startActivity(i);
+        } else if (id == R.id.nav_vp) {
+            Intent i = new Intent(driverNavigationDrawer.this,driverVP.class);
+            startActivity(i);
+        } else if (id == R.id.nav_eh) {
+            Intent i = new Intent(driverNavigationDrawer.this,driverHao.class);
+            startActivity(i);
+        } else if (id == R.id.nav_settings) {
+            Intent i = new Intent(driverNavigationDrawer.this,driverSettings.class);
+            startActivity(i);
+        } else if (id == R.id.nav_faqs) {
+            //no driver faqs
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

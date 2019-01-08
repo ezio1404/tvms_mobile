@@ -38,7 +38,8 @@
         <activity android:name=".driverDhp" />
         <activity android:name=".enforcerHomepage" />
         <activity android:name=".enforcerDhp" />
-        <activity android:name=".enforcerViolator"></activity>
+        <activity android:name=".enforcerViolator" />
+        <activity android:name=".enforcerInquiry"></activity>
     </application>
 
 </manifest>
