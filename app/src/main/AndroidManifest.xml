@@ -31,7 +31,8 @@
         <activity android:name=".enforcerHomepage" />
         <activity android:name=".enforcerDhp" />
         <activity android:name=".enforcerViolator" />
-        <activity android:name=".enforcerInquiry"></activity>
+        <activity android:name=".enforcerInquiry" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

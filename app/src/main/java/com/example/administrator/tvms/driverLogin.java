@@ -32,7 +32,7 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if(v == login) {
-//            startActivity(new Intent(this, driverNavigationDrawer.class));
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 }

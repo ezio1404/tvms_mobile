@@ -8,6 +8,6 @@ public class driverViolationRecord extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.driver_violation_record);
+        setContentView(R.layout.driver_vr);
     }
 }
