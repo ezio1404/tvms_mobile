@@ -16,10 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".driverNavigationDrawer"
-            android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".driverRegister" />
         <activity android:name=".driverInquiry" />
         <activity android:name=".driverViolationRecord" />
@@ -30,10 +26,6 @@
         <activity android:name=".enforcerSettings" />
         <activity android:name=".enforcerVP" />
         <activity android:name=".enforcerHao" />
-        <activity
-            android:name=".enforcerNavigationDrawer"
-            android:label="@string/title_activity_enforcer_navigation_drawer"
-            android:theme="@style/AppTheme" />
         <activity android:name=".driverHomepage" />
         <activity android:name=".driverDhp" />
         <activity android:name=".enforcerHomepage" />

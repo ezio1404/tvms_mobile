@@ -5,20 +5,20 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_inquire"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Inquire" />
-        <item
-            android:id="@+id/nav_violator"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Violator" />
+            android:id="@+id/nav_vr"
+            android:icon="@drawable/nav_vr"
+            android:title="Violation Record" />
         <item
             android:id="@+id/nav_vp"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/nav_vp"
             android:title="Violation and Penalties" />
         <item
+            android:id="@+id/nav_inquire"
+            android:icon="@drawable/nav_inquire"
+            android:title="Inquire" />
+        <item
             android:id="@+id/nav_eh"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/nav_eh"
             android:title="Emergency Hotlines" />
     </group>
 
@@ -26,12 +26,10 @@
         <menu>
             <item
                 android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_menu_share"
                 android:title="Settings" />
             <item
                 android:id="@+id/nav_faqs"
-                android:icon="@drawable/ic_menu_send"
-                android:title="FAQ" />
+                android:title="FAQs" />
         </menu>
     </item>
 
