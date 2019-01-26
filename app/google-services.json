@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "177945602069",
+    "firebase_url": "https://tvms-14761.firebaseio.com",
+    "project_id": "tvms-14761",
+    "storage_bucket": "tvms-14761.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177945602069:android:548496f30e1ce27f",
+        "android_client_info": {
+          "package_name": "com.example.administrator.tvms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177945602069-stdqkg5j8lnn5e077st1d30ej2pj0ec6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.administrator.tvms",
+            "certificate_hash": "84bb9d1299aba51b3c795539303aeb4bd0b016b5"
+          }
+        },
+        {
+          "client_id": "177945602069-79li0dintm888k3pr01mv4vk4mlq1sr1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4z7q7CnGrc9SPWUwxpbLm-2p1DVIEb7s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177945602069-79li0dintm888k3pr01mv4vk4mlq1sr1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

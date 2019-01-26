@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class driverLogin extends AppCompatActivity implements View.OnClickListener {
 
     EditText username, password;
     Button login;
+    TextView log;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
         login = (Button) findViewById(R.id.login);
 
         login.setOnClickListener(this);
+        log= findViewById(R.id.btn_log_enf);
+        log.setOnClickListener(this);
 
     }
 
@@ -31,8 +35,11 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if(v == login) {
+        if(v.getId() == R.id.login) {
             startActivity(new Intent(this, driverMain.class));
+        }
+        if(v.getId() == R.id.btn_log_enf){
+            startActivity(new Intent(this,enforcerLogin.class));
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.administrator.tvms;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -41,8 +42,10 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_violator:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new enforcer_violator_frag()).commit();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                        new enforcer_violator_frag()).commit();
+                Intent gIntent = new Intent(this, enforcer_violator_frag2.class);
+                startActivity(gIntent);
                 break;
             case R.id.nav_vp:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
