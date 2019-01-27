@@ -60,9 +60,7 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new driver_settings_frag()).commit();
                 break;
-//            case R.id.nav_faqs:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new driverFaq()).commit();
+
 
         }
 

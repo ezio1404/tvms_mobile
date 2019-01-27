@@ -26,7 +26,7 @@ public class enforcerLogin extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.login) {
-            startActivity(new Intent(this, enforcer_violator_frag.class));
+            startActivity(new Intent(this, enforcerMain.class));
         }
     }
 }

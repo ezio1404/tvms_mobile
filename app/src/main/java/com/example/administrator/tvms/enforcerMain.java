@@ -22,7 +22,7 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout_enf);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -33,7 +33,7 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new driver_hompage_frag()).commit();
+                    new enforcer_homepage_frag()).commit();
             navigationView.setCheckedItem(R.id.nav_violator);
         }
     }
@@ -42,8 +42,6 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_violator:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new enforcer_violator_frag()).commit();
                 Intent gIntent = new Intent(this, enforcer_violator_frag2.class);
                 startActivity(gIntent);
                 break;
@@ -63,9 +61,7 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new enforcer_settings_frag()).commit();
                 break;
-//            case R.id.nav_faqs:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new driverFaq()).commit();
+
 
         }
 
