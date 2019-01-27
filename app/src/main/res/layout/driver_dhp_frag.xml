@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".enforcerDhp">
+    tools:context=".driver_dhp_frag">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="vertical"
         android:padding="10dp">
@@ -43,4 +43,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>

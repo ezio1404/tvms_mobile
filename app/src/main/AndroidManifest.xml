@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.administrator.tvms">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/tvms_logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".enforcer_violator_frag2"></activity>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--<activity android:name=".enforcer_violator_frag"></activity>-->
         <activity android:name=".driverLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,24 +19,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".driverRegister" />
-        <activity android:name=".driverInquiry" />
-        <activity android:name=".driverViolationRecord" />
-        <activity android:name=".driverSettings" />
-        <activity android:name=".driverHao" />
-        <activity android:name=".driverVP" />
-        <activity android:name=".enforcerLogin" />
-        <activity android:name=".enforcerSettings" />
-        <activity android:name=".enforcerVP" />
-        <activity android:name=".enforcerHao" />
-        <activity android:name=".driverHomepage" />
-        <activity android:name=".driverDhp" />
-        <activity android:name=".enforcerHomepage" />
-        <activity android:name=".enforcerDhp" />
-        <activity android:name=".enforcerViolator" />
-        <activity android:name=".enforcerInquiry" />
-        <activity android:name=".enforcerMain" />
         <activity android:name=".driverMain" />
+        <activity android:name=".driver_inquiry_frag" />
+        <activity android:name=".driver_vp_frag" />
+        <activity android:name=".driver_settings_frag" />
+        <activity android:name=".driver_hao_frag" />
+        <activity android:name=".driver_vr_frag" />
+        <activity android:name=".driver_homepage_frag" />
+        <activity android:name=".driver_dhp_frag" />
+        <activity android:name=".enforcerLogin" />
+        <activity android:name=".enforcer_settings_frag" />
+        <activity android:name=".enforcer_vp_frag" />
+        <activity android:name=".enforcer_hao_frag" />
+        <activity android:name=".enforcer_homepage_frag" />
+        <activity android:name=".enforcer_dhp_frag" />
+        <activity android:name=".enforcer_violator_frag" />
+        <activity android:name=".enforcer_inquiry_frag" />
+        <activity android:name=".enforcerMain" />
     </application>
 
 </manifest>

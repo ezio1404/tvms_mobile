@@ -32,7 +32,7 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new driver_hompage_frag()).commit();
+                    new driver_homepage_frag()).commit();
             navigationView.setCheckedItem(R.id.nav_vr);
         }
     }

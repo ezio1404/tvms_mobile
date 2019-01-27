@@ -42,7 +42,7 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_violator:
-                Intent gIntent = new Intent(this, enforcer_violator_frag2.class);
+                Intent gIntent = new Intent(this, enforcer_violator_frag.class);
                 startActivity(gIntent);
                 break;
             case R.id.nav_vp:
@@ -51,7 +51,7 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_inquire:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new enforcer_inquire_frag()).commit();
+                        new enforcer_inquiry_frag()).commit();
                 break;
             case R.id.nav_eh:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
