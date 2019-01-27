@@ -35,16 +35,6 @@
             android:inputType="textPersonName"
             android:text="Plate Number" />
 
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:lines="5"
-            android:maxLines="5"
-            android:text="Addtional Info" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

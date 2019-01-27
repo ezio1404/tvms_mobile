@@ -37,7 +37,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:text="#" />
+                    android:text="Ordinace #" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -46,14 +46,6 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:text="Violation" />
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:text="Type" />
 
                 <TextView
                     android:id="@+id/textView16"
@@ -86,18 +78,11 @@
                     android:text="Jaywalking" />
 
                 <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Ordinance" />
-
-                <TextView
                     android:id="@+id/textView22"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="PHP 3,000" />
+                    android:text="PHP 1,000" />
             </LinearLayout>
 
         </LinearLayout>
