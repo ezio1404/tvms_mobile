@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 public class driverLogin extends AppCompatActivity implements View.OnClickListener {
 
     EditText username, password;
@@ -36,6 +41,12 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.login) {
+           String username,password;
+            username=this.username.getText().toString();
+            password=this.password.getText().toString();
+            RequestQueue RQ= Volley.newRequestQueue(driverLogin.this);
+            StringRequest SR = new StringRequest(Request.Method.POST,);
+
             startActivity(new Intent(this, driverMain.class));
         }
         if(v.getId() == R.id.btn_log_enf){

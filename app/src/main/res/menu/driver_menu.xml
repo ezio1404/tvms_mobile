@@ -17,8 +17,12 @@
             android:icon="@drawable/nav_inquire"
             android:title="Inquire" />
         <item
+            android:id="@+id/nav_services"
+            android:icon="@drawable/nav_services"
+            android:title="Services" />
+        <item
             android:id="@+id/nav_eh"
-            android:icon="@drawable/nav_eh"
+            android:icon="@drawable/nav_phone"
             android:title="Emergency Hotlines" />
     </group>
 
