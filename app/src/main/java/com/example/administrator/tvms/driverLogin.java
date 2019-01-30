@@ -44,8 +44,8 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
            String username,password;
             username=this.username.getText().toString();
             password=this.password.getText().toString();
-            RequestQueue RQ= Volley.newRequestQueue(driverLogin.this);
-            StringRequest SR = new StringRequest(Request.Method.POST,);
+//            RequestQueue RQ= Volley.newRequestQueue(driverLogin.this);
+//            StringRequest SR = new StringRequest(Request.Method.POST,);
 
             startActivity(new Intent(this, driverMain.class));
         }
