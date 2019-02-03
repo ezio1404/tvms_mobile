@@ -105,6 +105,20 @@
                 android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
+    <EditText
+        android:id="@+id/mPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Address" />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Descrepition" />
 
     <LinearLayout
         android:layout_width="match_parent"
