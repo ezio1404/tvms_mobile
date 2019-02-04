@@ -14,7 +14,9 @@ public class DriverSessionManager {
 
     private static final String PREF_NAME="DRIVER LOGIN";
     private static final String LOGIN="IS_LOGIN";
-    static final String DRIVER_EMAIL="driver_email";
+    public static final String DRIVER_EMAIL="driver_email";
+    public static final String DRIVER_PASS="driver_password";
+    public static final String DRIVER_PINCODE="driver_pincode";
 
 
     public DriverSessionManager(Context context) {
@@ -43,6 +45,9 @@ public class DriverSessionManager {
     public HashMap<String, String> getUserDetail(){
         HashMap<String, String> user = new  HashMap<>();
         user.put(DRIVER_EMAIL,sharedPreferences.getString(DRIVER_EMAIL,null));
+        user.put(DRIVER_PASS,sharedPreferences.getString(DRIVER_PASS,null));
+        user.put(DRIVER_PINCODE,sharedPreferences.getString(DRIVER_PINCODE,null));
+
         return user;
     }
 
