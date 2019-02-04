@@ -79,8 +79,10 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
                                 for (int i = 0;i <jsonArray.length();i++){
                                     String username = jsonObject.getString("driver_email");
                                     String password = jsonObject.getString("driver_password");
-                                    Toast.makeText(driverLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();
-
+                                   // Toast.makeText(driverLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();
+                                   Intent intent = new Intent(driverLogin.this,driverMain.class);
+                                   intent.putExtra("driver_email",username);
+                                   startActivity(intent);
                                 }
                             }
                         } catch (JSONException e) {

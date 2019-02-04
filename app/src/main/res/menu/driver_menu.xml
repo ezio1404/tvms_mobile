@@ -36,5 +36,12 @@
                 android:title="FAQs" />
         </menu>
     </item>
-
+    <item android:title="Logout">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/nav_phone"
+                android:title="Logout" />
+        </menu>
+    </item>
 </menu>
