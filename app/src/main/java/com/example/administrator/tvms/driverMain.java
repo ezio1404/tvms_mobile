@@ -1,6 +1,7 @@
 package com.example.administrator.tvms;
 
 import android.content.Intent;
+import android.se.omapi.Session;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,17 +17,24 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.HashMap;
+
 public class driverMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     private TextView username;
+    DriverSessionManager driverSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_main);
         Intent intent=getIntent();
-        String extraUsername=intent.getStringExtra("driver_email");
+       // String extraUsername=intent.getStringExtra("driver_email");
+driverSessionManager=new DriverSessionManager(this);
+driverSessionManager.checkLogin();
+        HashMap <String,String> user= driverSessionManager.getUserDetail();
+        String username=user.get(driverSessionManager.DRIVER_EMAIL);
 
-        Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
+        //Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -75,7 +83,7 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
                         new driver_services_frag()).commit();
                 break;
             case R.id.nav_logout:
-                finish();
+                driverSessionManager.logout();
                 break;
 
         }

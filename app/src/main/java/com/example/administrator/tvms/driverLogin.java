@@ -31,11 +31,14 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     EditText username, password;
     Button login;
     TextView log;
-
+    private static String URL_LOGIN="http://localhost:8082/tvms/loginDriver.php";
+    DriverSessionManager driverSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_login);
+
+        driverSessionManager = new DriverSessionManager(this);
 
         username= (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
@@ -66,7 +69,6 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     }
 
     private void login(String username, String password) {
-        String URL_LOGIN = "http://localhost:8082/tvms/loginDriver.php";
         StringRequest stringRequest =new StringRequest(Request.Method.POST, URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
@@ -80,7 +82,8 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
                                     String username = jsonObject.getString("driver_email");
                                     String password = jsonObject.getString("driver_password");
                                    // Toast.makeText(driverLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();
-                                   Intent intent = new Intent(driverLogin.this,driverMain.class);
+                                   driverSessionManager.createSession(username);
+                                    Intent intent = new Intent(driverLogin.this,driverMain.class);
                                    intent.putExtra("driver_email",username);
                                    startActivity(intent);
                                 }
