@@ -5,22 +5,15 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/mPlateNo"
+        android:id="@+id/clearance_plateNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="PlateNo." />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Transaction ID"
-        android:textSize="36sp" />
-
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn_requestClearance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="request clearance" />

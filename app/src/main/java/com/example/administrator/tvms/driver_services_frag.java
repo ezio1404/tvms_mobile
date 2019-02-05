@@ -20,8 +20,11 @@ import android.widget.EditText;
 public class driver_services_frag extends AppCompatActivity implements View.OnClickListener{
     Button btn_nnp,btn_rnp,btn_ns,btn_nrp,btn_rrp,btn_LTOservices;
     Button btn_verify,btn_clearance,btn_CTS;
-    Button btn_addPlateNo;
-    EditText mPlateNo;
+    Button btn_addPlateNo,btn_requestClearance,btn_requestCTS;
+    EditText mPlateNo,clearance_plateNo;
+    EditText cts_plateNo,cts_address,cts_desc;
+
+
     public Activity c;
     public Dialog d;
     @Nullable
@@ -102,10 +105,10 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
         if(v.getId()==R.id.btn_verify){
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
             View mView=getLayoutInflater().inflate(R.layout.driver_verify,null);
-
-            btn_addPlateNo=mView.findViewById(R.id.btn_addPlateNo);
             mPlateNo=mView.findViewById(R.id.mPlateNo);
-            String plateNo=mPlateNo.getText().toString().trim();
+            btn_addPlateNo=mView.findViewById(R.id.btn_addPlateNo);
+
+            String plateNo=mPlateNo.getText().toString();
             btn_addPlateNo.setOnClickListener(v1 -> {
                 Uri uri = Uri.parse("smsto:2600");
                 Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
@@ -119,10 +122,33 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
 
         }
         if(v.getId()==R.id.btn_clearance){
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
+            View mView=getLayoutInflater().inflate(R.layout.driver_clearance,null);
+            clearance_plateNo=mView.findViewById(R.id.clearance_plateNo);
+            btn_requestClearance = mView.findViewById(R.id.btn_requestClearance);
+
+            String mPlateNo=clearance_plateNo.getText().toString();
+            btn_requestClearance.setOnClickListener(v1 -> {
+                    //code here to send request to the agency
+                    //missing list of agency
+            });
 
         }
         if(v.getId()==R.id.btn_CTS){
-
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
+            View mView=getLayoutInflater().inflate(R.layout.driver_cts,null);
+            cts_plateNo=mView.findViewById(R.id.cts_plateNo);
+            cts_address = mView.findViewById(R.id.cts_address);
+            cts_desc=mView.findViewById(R.id.cts_desc);
+            btn_requestCTS=mView.findViewById(R.id.btn_requestCTS);
+//            String mPlateNo,address,desc;
+            String mPlateNo=cts_plateNo.getText().toString();
+            String address=cts_address.getText().toString();
+            String desc=cts_desc.getText().toString();
+            btn_requestCTS.setOnClickListener(v1 -> {
+                //code here to send request to the agency
+                //missing list of agency
+            });
         }
     }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/cts_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Address" />
+
+    <EditText
+        android:id="@+id/cts_plateNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Plate.No" />
+
+    <EditText
+        android:id="@+id/cts_desc"
+        android:layout_width="match_parent"
+        android:layout_height="278dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Description" />
+
+    <Button
+        android:id="@+id/btn_requestCTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reqeust Clamping/towing service " />
+</LinearLayout>
