@@ -6,13 +6,9 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +31,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_services_frag);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.driver_lto);
+        setContentView(R.layout.lto_services);
 
         btn_LTOservices= findViewById(R.id.btn_LTOservices);
         btn_verify= findViewById(R.id.btn_verify);
@@ -70,7 +66,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         if(v.getId()==R.id.btn_LTOservices){
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
-            View mView=getLayoutInflater().inflate(R.layout.driver_lto,null);
+            View mView=getLayoutInflater().inflate(R.layout.lto_services,null);
             Uri uri = Uri.parse("smsto:2600");
             Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
             String sms = null;
