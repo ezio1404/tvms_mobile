@@ -21,11 +21,6 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
     EditText cts_plateNo,cts_address,cts_desc;
 
 
-    public Activity c;
-    public Dialog d;
-    @Nullable
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +61,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         if(v.getId()==R.id.btn_LTOservices){
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
+            mBuilder.setTitle("LTO Services");
             View mView=getLayoutInflater().inflate(R.layout.lto_services,null);
             Uri uri = Uri.parse("smsto:2600");
             Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
@@ -100,6 +96,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
         }
         if(v.getId()==R.id.btn_verify){
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
+            mBuilder.setTitle("Verify PlateNo");
             View mView=getLayoutInflater().inflate(R.layout.driver_verify,null);
             mPlateNo=mView.findViewById(R.id.mPlateNo);
             btn_addPlateNo=mView.findViewById(R.id.btn_addPlateNo);
@@ -119,6 +116,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
         }
         if(v.getId()==R.id.btn_clearance){
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
+            mBuilder.setTitle("Vehicle Clearance");
             View mView=getLayoutInflater().inflate(R.layout.driver_clearance,null);
             clearance_plateNo=mView.findViewById(R.id.clearance_plateNo);
             btn_requestClearance = mView.findViewById(R.id.btn_requestClearance);
@@ -132,6 +130,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
         }
         if(v.getId()==R.id.btn_CTS){
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
+            mBuilder.setTitle("Clamping/Towing Service");
             View mView=getLayoutInflater().inflate(R.layout.driver_cts,null);
             cts_plateNo=mView.findViewById(R.id.cts_plateNo);
             cts_address = mView.findViewById(R.id.cts_address);
