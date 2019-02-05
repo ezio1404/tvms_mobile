@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <!--<activity android:name=".enforcer_violator_frag"></activity>-->
+
         <activity android:name=".driverLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
