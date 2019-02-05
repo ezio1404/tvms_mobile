@@ -13,13 +13,13 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Enforcer_server {
+public class EnforcerServer {
     private Context mContext;
     private static final String TAG = "EnforcerServer";
-    public Enforcer_server() {
+    public EnforcerServer() {
     }
 
-    public Enforcer_server(Context mContext) {
+    public EnforcerServer(Context mContext) {
         this.mContext = mContext;
     }
 

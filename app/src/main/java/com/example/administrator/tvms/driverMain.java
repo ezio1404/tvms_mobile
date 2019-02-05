@@ -80,8 +80,10 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
                         new driver_settings_frag()).commit();
                 break;
             case R.id.nav_services:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new driver_services_frag()).commit();
+                Intent i = new Intent(driverMain.this,driver_services_frag.class);
+                startActivity(i);
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                        new driver_services_frag()).commit();
                 break;
             case R.id.nav_logout:
                 driverSessionManager.logout();
