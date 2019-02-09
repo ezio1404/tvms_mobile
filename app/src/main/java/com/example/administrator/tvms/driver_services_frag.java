@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class driver_services_frag extends AppCompatActivity implements View.OnClickListener{
     Button btn_nnp,btn_rnp,btn_ns,btn_nrp,btn_rrp,btn_LTOservices;
@@ -25,31 +26,30 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_services_frag);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.lto_services);
+
 
         btn_LTOservices= findViewById(R.id.btn_LTOservices);
         btn_verify= findViewById(R.id.btn_verify);
         btn_clearance= findViewById(R.id.btn_clearance);
         btn_CTS= findViewById(R.id.btn_CTS);
-
-        btn_nnp= findViewById(R.id.btn_nnp);
-        btn_rnp= findViewById(R.id.btn_rnp);
-        btn_ns= findViewById(R.id.btn_ns);
-        btn_nrp= findViewById(R.id.btn_nrp);
-        btn_rrp= findViewById(R.id.btn_rrp);
+////
+//        btn_nnp= findViewById(R.id.btn_nnp);
+//        btn_rnp= findViewById(R.id.btn_rnp);
+//        btn_ns= findViewById(R.id.btn_ns);
+//        btn_nrp= findViewById(R.id.btn_nrp);
+//        btn_rrp= findViewById(R.id.btn_rrp);
 
 
         btn_LTOservices.setOnClickListener(this);
         btn_verify.setOnClickListener(this);
         btn_clearance.setOnClickListener(this);
         btn_CTS.setOnClickListener(this);
-
-        btn_nnp.setOnClickListener(this);
-        btn_rnp.setOnClickListener(this);
-        btn_ns.setOnClickListener(this);
-        btn_nrp.setOnClickListener(this);
-        btn_rrp.setOnClickListener(this);
+//
+//        btn_nnp.setOnClickListener(this);
+//        btn_rnp.setOnClickListener(this);
+//        btn_ns.setOnClickListener(this);
+//        btn_nrp.setOnClickListener(this);
+//        btn_rrp.setOnClickListener(this);
 
 
 
@@ -60,41 +60,54 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.btn_LTOservices){
-            AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
+
+//            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
             mBuilder.setTitle("LTO Services");
             View mView=getLayoutInflater().inflate(R.layout.lto_services,null);
-            Uri uri = Uri.parse("smsto:2600");
-            Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
-            String sms = null;
-            switch(v.getId()){
-                case R.id.btn_nnp:
-                    sms="LTO NEW NON PRO";
-//                    smsIntent.putExtra("sms_body","LTO NEW NON PRO");
-                    break;
-                case R.id.btn_rnp:
-                    sms="LTO RENEW NON PRO";
-//                    smsIntent.putExtra("sms_body","LTO RENEW NON PRO");
-                    break;
-                case R.id.btn_ns:
-                    sms="LTO NEW STUDENT";
-//                    smsIntent.putExtra("sms_body","LTO NEW STUDENT");
-                    break;
-                case R.id.btn_nrp:
-                    sms="LTO NEW REG PRIVATE";
-//                    smsIntent.putExtra("sms_body","LTO NEW REG PRIVATE");
-                    break;
-                case R.id.btn_rrp:
-                    sms="LTO RENEW REG PRIVATE";
-//                    smsIntent.putExtra("sms_body","LTO RENEW REG PRIVATE");
-                    break;
-            }
+            btn_nnp= mView.findViewById(R.id.btn_nnp);
+            btn_rnp= mView.findViewById(R.id.btn_rnp);
+            btn_ns= mView.findViewById(R.id.btn_ns);
+            btn_nrp= mView.findViewById(R.id.btn_nrp);
+            btn_rrp= mView.findViewById(R.id.btn_rrp);
+
+            btn_nnp.setOnClickListener(v1 -> {
+                Uri uri = Uri.parse("smsto:2600");
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
+                smsIntent.putExtra("sms_body","LTO NEW NON PRO");
+                startActivity(smsIntent);
+            });
+            btn_rnp.setOnClickListener(v1 -> {
+                Uri uri = Uri.parse("smsto:2600");
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
+                smsIntent.putExtra("sms_body","LTO RENEW NON PRO");
+                startActivity(smsIntent);
+            });
+            btn_ns.setOnClickListener(v1 -> {
+                Uri uri = Uri.parse("smsto:2600");
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
+                smsIntent.putExtra("sms_body","LTO NEW STUDENT");
+                startActivity(smsIntent);
+            });
+            btn_nrp.setOnClickListener(v1 -> {
+                Uri uri = Uri.parse("smsto:2600");
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
+                smsIntent.putExtra("sms_body","LTO NEW REG PRIVATE");
+                startActivity(smsIntent);
+            });
+            btn_rrp.setOnClickListener(v1 -> {
+                Uri uri = Uri.parse("smsto:2600");
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
+                smsIntent.putExtra("sms_body","LTO RENEW REG PRIVATE");
+                startActivity(smsIntent);
+            });
             mBuilder.setView(mView);
             AlertDialog dialog = mBuilder.create();
             dialog.show();
-            smsIntent.putExtra("sms_body",sms);
-            startActivity(smsIntent);
+
         }
         if(v.getId()==R.id.btn_verify){
+            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
             mBuilder.setTitle("Verify PlateNo");
             View mView=getLayoutInflater().inflate(R.layout.driver_verify,null);
@@ -115,6 +128,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
 
         }
         if(v.getId()==R.id.btn_clearance){
+//            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
             mBuilder.setTitle("Vehicle Clearance");
             View mView=getLayoutInflater().inflate(R.layout.driver_clearance,null);
@@ -129,6 +143,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
 
         }
         if(v.getId()==R.id.btn_CTS){
+            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
             mBuilder.setTitle("Clamping/Towing Service");
             View mView=getLayoutInflater().inflate(R.layout.driver_cts,null);

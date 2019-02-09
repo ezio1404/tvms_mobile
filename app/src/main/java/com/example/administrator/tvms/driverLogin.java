@@ -57,11 +57,11 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         if(v.getId() == R.id.login) {
            String username,password;
-            username=this.username.getText().toString().trim();
-            password=this.password.getText().toString().trim();
-            login(username,password);
+//            username=this.username.getText().toString().trim();
+//            password=this.password.getText().toString().trim();
+//            login(username,password);
 
-//            startActivity(new Intent(this, driverMain.class));
+            startActivity(new Intent(this, driverMain.class));
         }
         if(v.getId() == R.id.btn_log_enf){
             startActivity(new Intent(this,enforcerLogin.class));

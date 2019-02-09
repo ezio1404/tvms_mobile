@@ -27,12 +27,12 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_main);
-        Intent intent=getIntent();
-       // String extraUsername=intent.getStringExtra("driver_email");
-        driverSessionManager=new DriverSessionManager(this);
-        driverSessionManager.checkLogin();
-        HashMap <String,String> user= driverSessionManager.getUserDetail();
-        String username=user.get(driverSessionManager.DRIVER_EMAIL);
+//        Intent intent=getIntent();
+//       // String extraUsername=intent.getStringExtra("driver_email");
+//        driverSessionManager=new DriverSessionManager(this);
+//        driverSessionManager.checkLogin();
+//        HashMap <String,String> user= driverSessionManager.getUserDetail();
+//        String username=user.get(driverSessionManager.DRIVER_EMAIL);
 
 
         //Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);

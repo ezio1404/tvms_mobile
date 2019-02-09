@@ -36,6 +36,8 @@
         <activity android:name=".enforcer_violator_frag" />
         <!--<activity android:name=".enforcer_inquiry_frag" />-->
         <activity android:name=".enforcerMain" />
+        <activity android:name=".driver_services_frag" />
+        <activity android:name=".enforcer_services_frag" />
     </application>
 
 </manifest>
