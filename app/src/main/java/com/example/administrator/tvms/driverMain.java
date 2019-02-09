@@ -27,12 +27,12 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_main);
-        Intent intent=getIntent();
+//        Intent intent=getIntent();
        // String extraUsername=intent.getStringExtra("driver_email");
-        driverSessionManager=new DriverSessionManager(this);
-        driverSessionManager.checkLogin();
-        HashMap <String,String> user= driverSessionManager.getUserDetail();
-        String username=user.get(driverSessionManager.DRIVER_EMAIL);
+//        driverSessionManager=new DriverSessionManager(this);
+//        driverSessionManager.checkLogin();
+//        HashMap <String,String> user= driverSessionManager.getUserDetail();
+//        String username=user.get(driverSessionManager.DRIVER_EMAIL);
 
 
         //Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
@@ -80,8 +80,11 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
                         new driver_settings_frag()).commit();
                 break;
             case R.id.nav_services:
-                Intent i = new Intent(driverMain.this,driver_services_frag.class);
-                startActivity(i);
+//                Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
+                Intent serviceIntent = new Intent(this, driver_services_frag.class);
+                startActivity(serviceIntent);
+//                Intent gIntent = new Intent(this, enforcer_violator_frag.class);
+//                startActivity(gIntent);
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
 //                        new driver_services_frag()).commit();
                 break;
