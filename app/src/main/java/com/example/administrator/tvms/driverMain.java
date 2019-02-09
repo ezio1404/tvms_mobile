@@ -28,7 +28,11 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_main);
 //        Intent intent=getIntent();
+
 //       // String extraUsername=intent.getStringExtra("driver_email");
+
+       // String extraUsername=intent.getStringExtra("driver_email");
+
 //        driverSessionManager=new DriverSessionManager(this);
 //        driverSessionManager.checkLogin();
 //        HashMap <String,String> user= driverSessionManager.getUserDetail();
@@ -80,10 +84,8 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
                         new driver_settings_frag()).commit();
                 break;
             case R.id.nav_services:
-                Intent i = new Intent(driverMain.this,driver_services_frag.class);
-                startActivity(i);
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new driver_services_frag()).commit();
+                Intent serviceIntent = new Intent(this, driver_services_frag.class);
+                startActivity(serviceIntent);
                 break;
             case R.id.nav_logout:
                 driverSessionManager.logout();

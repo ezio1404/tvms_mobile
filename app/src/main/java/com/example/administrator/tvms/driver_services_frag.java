@@ -32,24 +32,11 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
         btn_verify= findViewById(R.id.btn_verify);
         btn_clearance= findViewById(R.id.btn_clearance);
         btn_CTS= findViewById(R.id.btn_CTS);
-////
-//        btn_nnp= findViewById(R.id.btn_nnp);
-//        btn_rnp= findViewById(R.id.btn_rnp);
-//        btn_ns= findViewById(R.id.btn_ns);
-//        btn_nrp= findViewById(R.id.btn_nrp);
-//        btn_rrp= findViewById(R.id.btn_rrp);
-
 
         btn_LTOservices.setOnClickListener(this);
         btn_verify.setOnClickListener(this);
         btn_clearance.setOnClickListener(this);
         btn_CTS.setOnClickListener(this);
-//
-//        btn_nnp.setOnClickListener(this);
-//        btn_rnp.setOnClickListener(this);
-//        btn_ns.setOnClickListener(this);
-//        btn_nrp.setOnClickListener(this);
-//        btn_rrp.setOnClickListener(this);
 
 
 
@@ -137,8 +124,8 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
 
             String mPlateNo=clearance_plateNo.getText().toString();
             btn_requestClearance.setOnClickListener(v1 -> {
-                    //code here to send request to the agency
-                    //missing list of agency
+                //code here to send request to the agency
+                //missing list of agency
             });
 
         }

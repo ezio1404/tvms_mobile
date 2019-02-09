@@ -64,8 +64,13 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
             case R.id.nav_services:
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
 //                        new enforcer_services_frag()).commit();
+
                 Intent enfIntent= new Intent(this,enforcer_services_frag.class);
                 startActivity(enfIntent);
+
+                Intent i = new Intent(this,enforcer_services_frag.class);
+                startActivity(i);
+
                 break;
 
 

@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.administrator.tvms">
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity
+            android:name=".test"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".driverLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,22 +24,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".driverMain" />
-        <!--<activity android:name=".driver_inquiry_frag" />-->
-        <!--<activity android:name=".driver_vp_frag" />-->
-        <!--<activity android:name=".driver_settings_frag" />-->
-        <!--<activity android:name=".driver_hao_frag" />-->
-        <!--<activity android:name=".driver_vr_frag" />-->
-        <!--<activity android:name=".driver_homepage_frag" />-->
-        <!--<activity android:name=".driver_dhp_frag" />-->
-        <activity android:name=".enforcerLogin" />
-        <!--<activity android:name=".enforcer_settings_frag" />-->
-        <!--<activity android:name=".enforcer_vp_frag" />-->
-        <!--<activity android:name=".enforcer_hao_frag" />-->
-        <!--<activity android:name=".enforcer_homepage_frag" />-->
-        <!--<activity android:name=".enforcer_dhp_frag" />-->
-        <activity android:name=".enforcer_violator_frag" />
-        <!--<activity android:name=".enforcer_inquiry_frag" />-->
+        <activity android:name=".driverMain" /> <!-- <activity android:name=".driver_inquiry_frag" /> -->
+        <!-- <activity android:name=".driver_vp_frag" /> -->
+        <!-- <activity android:name=".driver_settings_frag" /> -->
+        <!-- <activity android:name=".driver_hao_frag" /> -->
+        <!-- <activity android:name=".driver_vr_frag" /> -->
+        <!-- <activity android:name=".driver_homepage_frag" /> -->
+        <!-- <activity android:name=".driver_dhp_frag" /> -->
+        <activity android:name=".enforcerLogin" /> <!-- <activity android:name=".enforcer_settings_frag" /> -->
+        <!-- <activity android:name=".enforcer_vp_frag" /> -->
+        <!-- <activity android:name=".enforcer_hao_frag" /> -->
+        <!-- <activity android:name=".enforcer_homepage_frag" /> -->
+        <!-- <activity android:name=".enforcer_dhp_frag" /> -->
+        <activity android:name=".enforcer_violator_frag" /> <!-- <activity android:name=".enforcer_inquiry_frag" /> -->
         <activity android:name=".enforcerMain" />
         <activity android:name=".driver_services_frag" />
         <activity android:name=".enforcer_services_frag" />
