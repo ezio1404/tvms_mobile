@@ -27,17 +27,17 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_main);
-//        Intent intent=getIntent();
-
-//       // String extraUsername=intent.getStringExtra("driver_email");
+        Intent intent=getIntent();
 
        // String extraUsername=intent.getStringExtra("driver_email");
 
-//        driverSessionManager=new DriverSessionManager(this);
-//        driverSessionManager.checkLogin();
-//        HashMap <String,String> user= driverSessionManager.getUserDetail();
-//        String username=user.get(driverSessionManager.DRIVER_EMAIL);
+        String extraUsername=intent.getStringExtra("driver_email");
 
+        driverSessionManager=new DriverSessionManager(this);
+        driverSessionManager.checkLogin();
+        HashMap <String,String> user= driverSessionManager.getUserDetail();
+        String username=user.get(driverSessionManager.DRIVER_EMAIL);
+        String id=user.get(driverSessionManager.DRIVER_ID);
 
         //Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
 
@@ -68,8 +68,8 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
                         new driver_vr_frag()).commit();
                 break;
             case R.id.nav_vp:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new driver_vp_frag()).commit();
+                Intent vpIntent = new Intent(this, driver_vp_frag.class);
+                startActivity(vpIntent);
                 break;
             case R.id.nav_inquire:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

@@ -25,18 +25,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".driverMain" /> <!-- <activity android:name=".driver_inquiry_frag" /> -->
-        <!-- <activity android:name=".driver_vp_frag" /> -->
-        <!-- <activity android:name=".driver_settings_frag" /> -->
-        <!-- <activity android:name=".driver_hao_frag" /> -->
-        <!-- <activity android:name=".driver_vr_frag" /> -->
-        <!-- <activity android:name=".driver_homepage_frag" /> -->
+         <activity android:name=".driver_vp_frag" />
+         <!--<activity android:name=".driver_settings_frag" /> -->
+         <!--<activity android:name=".driver_hao_frag" /> -->
+         <!--<activity android:name=".driver_vr_frag" /> -->
+         <!--<activity android:name=".driver_homepage_frag" /> -->
         <!-- <activity android:name=".driver_dhp_frag" /> -->
         <activity android:name=".enforcerLogin" /> <!-- <activity android:name=".enforcer_settings_frag" /> -->
-        <!-- <activity android:name=".enforcer_vp_frag" /> -->
+         <activity android:name=".enforcer_vp_frag" />
         <!-- <activity android:name=".enforcer_hao_frag" /> -->
         <!-- <activity android:name=".enforcer_homepage_frag" /> -->
         <!-- <activity android:name=".enforcer_dhp_frag" /> -->
-        <activity android:name=".enforcer_violator_frag" /> <!-- <activity android:name=".enforcer_inquiry_frag" /> -->
+        <activity android:name=".enforcer_violator_frag" />
+        <!-- <activity android:name=".enforcer_inquiry_frag" /> -->
         <activity android:name=".enforcerMain" />
         <activity android:name=".driver_services_frag" />
         <activity android:name=".enforcer_services_frag" />

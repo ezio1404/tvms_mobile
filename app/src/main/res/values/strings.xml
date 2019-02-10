@@ -14,4 +14,18 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_test">test</string>
     <string name="stringLTO">LTO Services</string>
+    <string name="ok_label">Ok</string>
+
+    <string-array name="shopping_item">
+        <item>Onion</item>
+        <item>Sausage</item>
+        <item>Milk</item>
+        <item>Garlic</item>
+        <item>Beef</item>
+        <item>Veggies</item>
+        <item>Olive</item>
+        <item>Cheese</item>
+        <item>Tuna</item>
+        <item>Mushrooms</item>
+    </string-array>
 </resources>

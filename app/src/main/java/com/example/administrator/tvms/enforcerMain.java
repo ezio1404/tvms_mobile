@@ -11,9 +11,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import java.util.HashMap;
+
 public class enforcerMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
-
+    EnforcerSessionManager enforcerSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,17 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        enforcerSessionManager=new EnforcerSessionManager(this);
+        enforcerSessionManager.checkLogin();
+        HashMap<String,String> user= enforcerSessionManager.getUserDetail();
+        String username=user.get(enforcerSessionManager.ENF_EMAIL);
+        String id=user.get(enforcerSessionManager.ENF_ID);
+
+
+
+
 
         drawer = findViewById(R.id.drawer_layout_enf);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -46,8 +59,8 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
                 startActivity(gIntent);
                 break;
             case R.id.nav_vp:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new enforcer_vp_frag()).commit();
+                Intent vpIntent = new Intent(this, enforcer_vp_frag.class);
+                startActivity(vpIntent);
                 break;
             case R.id.nav_inquire:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -62,17 +75,11 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
                         new enforcer_settings_frag()).commit();
                 break;
             case R.id.nav_services:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new enforcer_services_frag()).commit();
-
                 Intent enfIntent= new Intent(this,enforcer_services_frag.class);
                 startActivity(enfIntent);
-
-                Intent i = new Intent(this,enforcer_services_frag.class);
-                startActivity(i);
-
+            case R.id.nav_logout:
+                enforcerSessionManager.logout();
                 break;
-
 
         }
 

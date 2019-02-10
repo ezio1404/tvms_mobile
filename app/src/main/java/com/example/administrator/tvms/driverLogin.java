@@ -58,13 +58,10 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
         if(v.getId() == R.id.login) {
            String username,password;
 
-//            username=this.username.getText().toString().trim();
-//            password=this.password.getText().toString().trim();
-
             username=this.username.getText().toString().trim();
             password=this.password.getText().toString().trim();
 
-//            login(username,password);
+            login(username,password);
 
             startActivity(new Intent(this, driverMain.class));
         }
@@ -85,11 +82,12 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
                             if(success.equals("1")){
                                 for (int i = 0;i <jsonArray.length();i++){
                                     String username = jsonObject.getString("driver_email");
-                                    String password = jsonObject.getString("driver_password");
+                                    int id = Integer.parseInt(jsonObject.getString("driver_id"));
                                    // Toast.makeText(driverLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();
-                                   driverSessionManager.createSession(username);
+                                   driverSessionManager.createSession(username,id);
                                     Intent intent = new Intent(driverLogin.this,driverMain.class);
                                    intent.putExtra("driver_email",username);
+                                    intent.putExtra("driver_id",id);
                                    startActivity(intent);
                                 }
                             }

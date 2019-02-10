@@ -16,7 +16,7 @@ public class DriverSessionManager {
     private static final String LOGIN="IS_LOGIN";
     public static final String DRIVER_EMAIL="driver_email";
     public static final String DRIVER_PASS="driver_password";
-    public static final String DRIVER_PINCODE="driver_pincode";
+    public static final String DRIVER_ID="driver_id";
 
 
     public DriverSessionManager(Context context) {
@@ -25,9 +25,10 @@ public class DriverSessionManager {
         editor = sharedPreferences.edit();
     }
 
-    public void createSession(String username){
+    public void createSession(String username,int id){
         editor.putBoolean(LOGIN,true);
         editor.putString(DRIVER_EMAIL,username);
+        editor.putString(DRIVER_ID, String.valueOf(id));
         editor.apply();
     }
 
@@ -46,7 +47,7 @@ public class DriverSessionManager {
         HashMap<String, String> user = new  HashMap<>();
         user.put(DRIVER_EMAIL,sharedPreferences.getString(DRIVER_EMAIL,null));
         user.put(DRIVER_PASS,sharedPreferences.getString(DRIVER_PASS,null));
-        user.put(DRIVER_PINCODE,sharedPreferences.getString(DRIVER_PINCODE,null));
+        user.put(DRIVER_ID,sharedPreferences.getString(DRIVER_ID,null));
 
         return user;
     }
