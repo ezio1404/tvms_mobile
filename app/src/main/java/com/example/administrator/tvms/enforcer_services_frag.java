@@ -27,9 +27,8 @@ public class enforcer_services_frag  extends AppCompatActivity implements View.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.driver_services_frag);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.lto_services);
+        setContentView(R.layout.enforcer_services_frag);
+
 
         btn_LTOservices = findViewById(R.id.btn_LTOservices);
         btn_verify = findViewById(R.id.btn_verify);
@@ -89,6 +88,7 @@ public class enforcer_services_frag  extends AppCompatActivity implements View.O
                 smsIntent.putExtra("sms_body", "LTO RENEW REG PRIVATE");
                 startActivity(smsIntent);
             });
+            mBuilder.setPositiveButton("Ok",null);
             mBuilder.setView(mView);
             AlertDialog dialog = mBuilder.create();
             dialog.show();

@@ -88,6 +88,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
                 smsIntent.putExtra("sms_body","LTO RENEW REG PRIVATE");
                 startActivity(smsIntent);
             });
+            mBuilder.setPositiveButton("Ok",null);
             mBuilder.setView(mView);
             AlertDialog dialog = mBuilder.create();
             dialog.show();
