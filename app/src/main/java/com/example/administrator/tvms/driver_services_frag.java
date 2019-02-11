@@ -105,6 +105,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
                 smsIntent.putExtra("sms_body","LTO VEHICLE "+plateNo);
                 startActivity(smsIntent);
             });
+            mBuilder.setPositiveButton("Cancel",null);
             mBuilder.setView(mView);
             AlertDialog dialog = mBuilder.create();
             dialog.show();
@@ -112,7 +113,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
 
         }
         if(v.getId()==R.id.btn_clearance){
-//            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
+//
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
             mBuilder.setTitle("Vehicle Clearance");
             View mView=getLayoutInflater().inflate(R.layout.driver_clearance,null);
@@ -124,10 +125,14 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
                 //code here to send request to the agency
                 //missing list of agency
             });
+            mBuilder.setPositiveButton("Cancel",null);
+            mBuilder.setView(mView);
+            AlertDialog dialog = mBuilder.create();
+            dialog.show();
 
         }
         if(v.getId()==R.id.btn_CTS){
-            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
+//            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
             mBuilder.setTitle("Clamping/Towing Service");
             View mView=getLayoutInflater().inflate(R.layout.driver_cts,null);
@@ -143,6 +148,10 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
                 //code here to send request to the agency
                 //missing list of agency
             });
+            mBuilder.setPositiveButton("Cancel",null);
+            mBuilder.setView(mView);
+            AlertDialog dialog = mBuilder.create();
+            dialog.show();
         }
     }
 

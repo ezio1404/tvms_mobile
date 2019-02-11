@@ -109,6 +109,7 @@ public class enforcer_services_frag  extends AppCompatActivity implements View.O
                 smsIntent.putExtra("sms_body", "LTO VEHICLE " + plateNo);
                 startActivity(smsIntent);
             });
+            mBuilder.setPositiveButton("Cancel",null);
             mBuilder.setView(mView);
             AlertDialog dialog = mBuilder.create();
             dialog.show();
@@ -128,7 +129,10 @@ public class enforcer_services_frag  extends AppCompatActivity implements View.O
                 //code here to send request to the agency
                 //missing list of agency
             });
-
+            mBuilder.setPositiveButton("Cancel",null);
+            mBuilder.setView(mView);
+            AlertDialog dialog = mBuilder.create();
+            dialog.show();
         }
         if (v.getId() == R.id.btn_CTS) {
             Toast.makeText(this, "shit", Toast.LENGTH_LONG).show();
@@ -147,6 +151,10 @@ public class enforcer_services_frag  extends AppCompatActivity implements View.O
                 //code here to send request to the agency
                 //missing list of agency
             });
+            mBuilder.setPositiveButton("Cancel",null);
+            mBuilder.setView(mView);
+            AlertDialog dialog = mBuilder.create();
+            dialog.show();
         }
     }
 }
