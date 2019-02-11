@@ -62,10 +62,10 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
                 Intent vpIntent = new Intent(this, enforcer_vp_frag.class);
                 startActivity(vpIntent);
                 break;
-            case R.id.nav_inquire:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new enforcer_inquiry_frag()).commit();
-                break;
+//            case R.id.nav_inquire:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                        new enforcer_inquiry_frag()).commit();
+//                break;
             case R.id.nav_eh:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new enforcer_hao_frag()).commit();

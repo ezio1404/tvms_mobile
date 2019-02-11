@@ -32,12 +32,12 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
        // String extraUsername=intent.getStringExtra("driver_email");
 
         String extraUsername=intent.getStringExtra("driver_email");
-
-        driverSessionManager=new DriverSessionManager(this);
-        driverSessionManager.checkLogin();
-        HashMap <String,String> user= driverSessionManager.getUserDetail();
-        String username=user.get(driverSessionManager.DRIVER_EMAIL);
-        String id=user.get(driverSessionManager.DRIVER_ID);
+//
+//        driverSessionManager=new DriverSessionManager(this);
+//        driverSessionManager.checkLogin();
+//        HashMap <String,String> user= driverSessionManager.getUserDetail();
+//        String username=user.get(driverSessionManager.DRIVER_EMAIL);
+//        String id=user.get(driverSessionManager.DRIVER_ID);
 
         //Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
 
@@ -71,10 +71,10 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
                 Intent vpIntent = new Intent(this, driver_vp_frag.class);
                 startActivity(vpIntent);
                 break;
-            case R.id.nav_inquire:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new driver_inquiry_frag()).commit();
-                break;
+//            case R.id.nav_inquire:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                        new driver_inquiry_frag()).commit();
+//                break;
             case R.id.nav_eh:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new driver_hao_frag()).commit();
@@ -86,6 +86,10 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
             case R.id.nav_services:
                 Intent serviceIntent = new Intent(this, driver_services_frag.class);
                 startActivity(serviceIntent);
+                break;
+            case R.id.nav_faqs:
+                Intent fqs = new Intent(this, faq.class);
+                startActivity(fqs);
                 break;
             case R.id.nav_logout:
                 driverSessionManager.logout();

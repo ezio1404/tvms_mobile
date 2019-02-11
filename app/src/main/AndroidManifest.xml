@@ -13,10 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".test"
-            android:label="@string/title_activity_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity android:name=".driverLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +34,10 @@
         <!-- <activity android:name=".enforcer_homepage_frag" /> -->
         <!-- <activity android:name=".enforcer_dhp_frag" /> -->
         <activity android:name=".enforcer_violator_frag" />
+        <activity android:name=".faq" />
+        <activity android:name=".pdf1" />
+        <activity android:name=".pdf2" />
+        <activity android:name=".pdf3" />
         <!-- <activity android:name=".enforcer_inquiry_frag" /> -->
         <activity android:name=".enforcerMain" />
         <activity android:name=".driver_services_frag" />

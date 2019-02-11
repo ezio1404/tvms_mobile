@@ -31,7 +31,7 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     EditText username, password;
     Button login;
     TextView log;
-    private static String URL_LOGIN="http://localhost:8082/tvms/loginDriver.php";
+    private static String URL_LOGIN="http://localhost:8080/tvms/loginDriver.php";
     DriverSessionManager driverSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
             username=this.username.getText().toString().trim();
             password=this.password.getText().toString().trim();
 
-            login(username,password);
+//            login(username,password);
 
             startActivity(new Intent(this, driverMain.class));
         }

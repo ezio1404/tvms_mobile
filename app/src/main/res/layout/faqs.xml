@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Republic Act No. 10586 - An Act Penalizing Persons Driving Under The Influence Of Alcohol, Dangerous Drugs, And Similar Substances, And For Other Purposes" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Implementing Rules and Regulations of Republic Act No.10666: An Act Providing for the Safety of Children Aboard Motorcycles" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Republic Act No.10916 - An Act Requiring the Mandatory Installation of Speed Limiter in Public Utility and Certain Types of Vehicles" />
+
+</LinearLayout>

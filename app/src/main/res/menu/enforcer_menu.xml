@@ -13,10 +13,6 @@
             android:icon="@drawable/nav_vp"
             android:title="Violation and Penalties" />
         <item
-            android:id="@+id/nav_reports"
-            android:icon="@drawable/nav_report"
-            android:title="Report" />
-        <item
             android:id="@+id/nav_services"
             android:icon="@drawable/nav_services"
             android:title="Services" />
@@ -33,7 +29,7 @@
                 android:title="Settings" />
             <item
                 android:id="@+id/nav_faqs"
-                android:title="FAQs" />
+                android:title="Republic Act" />
         </menu>
     </item>
 

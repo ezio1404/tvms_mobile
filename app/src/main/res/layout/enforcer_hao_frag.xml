@@ -6,79 +6,22 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    tools:context=".enforcer_hao_frag">
-
-    <LinearLayout
+    android:orientation="vertical"
+    tools:context=".enforcer_hao_frag" >
+    <TextView
+        android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:orientation="vertical"
-        android:padding="25dp">
+        android:text="Hotlines and offices" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/enforcer_listview_hao">
 
-            <TextView
-                android:id="@+id/address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Adddress"
-                android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/exadd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="example address"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/hoyline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Hotline"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/exhotline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="example hotline"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/branch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Branch"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/exbramch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="example "
-                android:textSize="14sp" />
-        </LinearLayout>
-    </LinearLayout>
+    </ListView>
 </LinearLayout>
+
+
+

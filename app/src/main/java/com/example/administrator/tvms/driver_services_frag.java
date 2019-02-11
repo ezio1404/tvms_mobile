@@ -95,7 +95,7 @@ public class driver_services_frag extends AppCompatActivity implements View.OnCl
 
         }
         if(v.getId()==R.id.btn_verify){
-            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
+
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(driver_services_frag.this);
             mBuilder.setTitle("Verify PlateNo");
             View mView=getLayoutInflater().inflate(R.layout.driver_verify,null);
