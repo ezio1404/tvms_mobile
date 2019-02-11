@@ -25,13 +25,13 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
 
-        enforcerSessionManager=new EnforcerSessionManager(this);
-        enforcerSessionManager.checkLogin();
-        HashMap<String,String> user= enforcerSessionManager.getUserDetail();
-        String username=user.get(enforcerSessionManager.ENF_EMAIL);
-        String id=user.get(enforcerSessionManager.ENF_ID);
-
-
+//        enforcerSessionManager=new EnforcerSessionManager(this);
+//        enforcerSessionManager.checkLogin();
+//        HashMap<String,String> user= enforcerSessionManager.getUserDetail();
+//        String username=user.get(enforcerSessionManager.ENF_EMAIL);
+//        String id=user.get(enforcerSessionManager.ENF_ID);
+//
+//
 
 
 
@@ -80,6 +80,9 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
             case R.id.nav_logout:
                 enforcerSessionManager.logout();
                 break;
+            case R.id.nav_faqs:
+                Intent fqs = new Intent(this, faq.class);
+                startActivity(fqs);
 
         }
 

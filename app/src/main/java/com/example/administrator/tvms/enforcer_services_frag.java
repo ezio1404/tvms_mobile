@@ -51,7 +51,7 @@ public class enforcer_services_frag  extends AppCompatActivity implements View.O
 //            Toast.makeText(this,"shit",Toast.LENGTH_LONG).show();
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
             mBuilder.setTitle(getString(R.string.stringLTO));
-            View mView = getLayoutInflater().inflate(R.layout.lto_services, null);
+            View mView = getLayoutInflater().inflate(R.layout.enforcer_lto_services, null);
             btn_nnp = mView.findViewById(R.id.btn_nnp);
             btn_rnp = mView.findViewById(R.id.btn_rnp);
             btn_ns = mView.findViewById(R.id.btn_ns);

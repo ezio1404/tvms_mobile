@@ -49,7 +49,7 @@ public class enforcerLogin extends AppCompatActivity implements View.OnClickList
             username=this.username.getText().toString().trim();
             password=this.password.getText().toString().trim();
 
-            login(username,password);
+//            login(username,password);
             startActivity(new Intent(this, enforcerMain.class));
         }
     }

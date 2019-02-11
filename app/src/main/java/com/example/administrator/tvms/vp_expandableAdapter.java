@@ -77,7 +77,7 @@ public class vp_expandableAdapter extends BaseExpandableListAdapter {
         if(view == null)
         {
             LayoutInflater inflater = (LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_item,null);
+            view = inflater.inflate(R.layout.vp_list_item,null);
         }
 
         TextView ordinanceNo = (TextView)view.findViewById(R.id.ordinanceNo);
