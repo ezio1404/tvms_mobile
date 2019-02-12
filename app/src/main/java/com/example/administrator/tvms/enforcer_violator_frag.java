@@ -34,7 +34,7 @@ public class enforcer_violator_frag extends AppCompatActivity {
         btn_addViolation=findViewById(R.id.btn_addViolation);
         mItemSelected = (TextView) findViewById(R.id.tvItemSelected);
 
-        listItems = getResources().getStringArray(R.array.shopping_item); // items
+        listItems = getResources().getStringArray(R.array.shopping_item); // items , array of violations
         checkedItems = new boolean[listItems.length];
         btn_addViolation.setOnClickListener(view -> {
             AlertDialog.Builder mBuilder = new AlertDialog.Builder(enforcer_violator_frag.this);
@@ -72,6 +72,8 @@ public class enforcer_violator_frag extends AppCompatActivity {
             AlertDialog mDialog = mBuilder.create();
             mDialog.show();
         });
+
+
         final Activity activity = this;
         scan_btn.setOnClickListener(view -> {
             IntentIntegrator integrator = new IntentIntegrator(activity);
