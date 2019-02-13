@@ -82,12 +82,12 @@ public class vp_expandableAdapter extends BaseExpandableListAdapter {
 
         TextView ordinanceNo = (TextView)view.findViewById(R.id.ordinanceNo);
         TextView articleNo = (TextView)view.findViewById(R.id.articleNo);
-        TextView desc = (TextView)view.findViewById(R.id.desc);
+        TextView violation = (TextView)view.findViewById(R.id.violation);
         TextView penalty = (TextView)view.findViewById(R.id.penalty);
 
         ordinanceNo.setText(childText);
         articleNo.setText(childText);
-        desc.setText(childText);
+        violation.setText(childText);
         penalty.setText(childText);
         return view;
     }

@@ -66,4 +66,5 @@ function loginEnforcer($data, $fields) {
 		}
 	}
         
-    }
+	}
+	

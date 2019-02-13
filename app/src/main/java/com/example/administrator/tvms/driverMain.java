@@ -29,17 +29,17 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
         setContentView(R.layout.driver_main);
         Intent intent=getIntent();
 
-       // String extraUsername=intent.getStringExtra("driver_email");
+//        String extraUsername=intent.getStringExtra("driver_email");
 
         String extraUsername=intent.getStringExtra("driver_email");
-//
-//        driverSessionManager=new DriverSessionManager(this);
-//        driverSessionManager.checkLogin();
-//        HashMap <String,String> user= driverSessionManager.getUserDetail();
-//        String username=user.get(driverSessionManager.DRIVER_EMAIL);
-//        String id=user.get(driverSessionManager.DRIVER_ID);
 
-        //Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
+        driverSessionManager=new DriverSessionManager(this);
+        driverSessionManager.checkLogin();
+        HashMap <String,String> user= driverSessionManager.getUserDetail();
+        String username=user.get(driverSessionManager.DRIVER_EMAIL);
+        String id=user.get(driverSessionManager.DRIVER_ID);
+
+        Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

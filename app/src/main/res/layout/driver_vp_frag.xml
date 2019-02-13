@@ -14,8 +14,9 @@
         android:layout_marginTop="25dp"
         android:text="Violations and Penalties"
         android:textSize="30sp" />
-<ExpandableListView
-    android:id="@+id/lvExp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"></ExpandableListView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <!--android:background="@android:color/darker_gray" />-->
 </LinearLayout>

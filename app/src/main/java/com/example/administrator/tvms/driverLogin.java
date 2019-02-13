@@ -31,7 +31,7 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     EditText username, password;
     Button login;
     TextView log;
-    private static String URL_LOGIN="http://localhost:8080/tvms/loginDriver.php";
+    private static String URL_LOGIN="http://192.168.10.165/tvms/loginDriver.php";
     DriverSessionManager driverSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
             username=this.username.getText().toString().trim();
             password=this.password.getText().toString().trim();
 
-//            login(username,password);
+            login(username,password);
 
             startActivity(new Intent(this, driverMain.class));
         }
@@ -70,20 +70,26 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    private void login(String username, String password) {
+    private void login(final String username,final  String password) {
         StringRequest stringRequest =new StringRequest(Request.Method.POST, URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
-                            String success=jsonObject.getString("Success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("Driver login");
+                            String success = jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("login");
+
+
                             if(success.equals("1")){
-                                for (int i = 0;i <jsonArray.length();i++){
-                                    String username = jsonObject.getString("driver_email");
-                                    int id = Integer.parseInt(jsonObject.getString("driver_id"));
-                                   // Toast.makeText(driverLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();
+
+                                for (int i = 0; i < jsonArray.length(); i++) {
+
+                                    JSONObject object = jsonArray.getJSONObject(i);
+                                    String username = object.getString("driver_email").trim();
+                                    int id = object.getInt("driver_id");
+//                                    int id = Integer.parseInt(object.getString("driver_id"));
+                                    Toast.makeText(driverLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();
                                    driverSessionManager.createSession(username,id);
                                     Intent intent = new Intent(driverLogin.this,driverMain.class);
                                    intent.putExtra("driver_email",username);
