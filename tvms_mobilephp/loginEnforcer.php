@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         
         $row = mysqli_fetch_assoc($response);
 
-        if ( password_verify($password, $row['enforcer_password']) ) {
+        if ( $enforcer_password== $row['enforcer_password'] ) {
             
             $index['enforcer_lname'] = $row['enforcer_lname'];
             $index['enforcer_email'] = $row['enforcer_email'];

@@ -16,12 +16,13 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     if( mysqli_num_rows($response) === 1 ) {
         
         if ($row = mysqli_fetch_assoc($response)) {
- 
+            $h['driver_fname']       = $row['driver_fname'] ;
+             $h['driver_mi']       = $row['driver_mi'] ;
              $h['driver_lname']        = $row['driver_lname'] ;
              $h['driver_email']       = $row['driver_email'] ;
- 
+             $h['driver_pincode']       = $row['driver_pincode'] ;
+             $h['driver_password']       = $row['driver_password'] ;
              array_push($result["read"], $h);
- 
              $result["success"] = "1";
              echo json_encode($result);
         }

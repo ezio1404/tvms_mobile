@@ -28,15 +28,9 @@ include 'dbconn.php';
     if ( $status ) {
         $result["success"] = "1";
         $result["message"] = "success";
-
         echo json_encode($result);
-
-
     } else {
-
         $result["success"] = "0";
         $result["message"] = "error";
-
         echo json_encode($result);
-
     }
