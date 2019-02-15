@@ -21,7 +21,7 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enforcer_main);
-d
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -32,7 +32,7 @@ d
         String username=user.get(enforcerSessionManager.ENF_EMAIL);
         String id=user.get(enforcerSessionManager.ENF_ID);
 
-        Toast.makeText(enforcerMain.this,"Username : "+username +"id" +id ,Toast.LENGTH_SHORT);
+        Toast.makeText(enforcerMain.this,"Username : "+username +"id" +id ,Toast.LENGTH_SHORT).show();
 
 
 
