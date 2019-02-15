@@ -39,7 +39,7 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
         String username=user.get(driverSessionManager.DRIVER_EMAIL);
         String id=user.get(driverSessionManager.DRIVER_ID);
 
-        Toast.makeText(driverMain.this,"Username : "+extraUsername,Toast.LENGTH_SHORT);
+        Toast.makeText(driverMain.this,"Username : "+username +"id" +id ,Toast.LENGTH_SHORT);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

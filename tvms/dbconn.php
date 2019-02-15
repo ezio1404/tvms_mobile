@@ -7,7 +7,14 @@ function conn(){
 		echo $e->getMessage();
 	}
 }
-
+function getAllVP(){
+	$conn=conn();
+	$sql = "SELECT * FROM violation";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+	$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	return $row;
+}
 
 function loginDriver($data, $fields) {
 	$sql = "SELECT * FROM driver WHERE $fields[0] = ?";
@@ -66,5 +73,4 @@ function loginEnforcer($data, $fields) {
 		}
 	}
         
-	}
-	
+    }

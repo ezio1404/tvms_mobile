@@ -1,31 +1,29 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD']=='POST') {
+ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
-    $driver_email = $_POST['driver_email'];
-    $driver_password = $_POST['driver_password'];
 
 
     require_once 'connect.php';
 
-    $sql = "SELECT * FROM driver WHERE driver_email='$driver_email' ";
+    $sql = "SELECT * FROM agency";
 
     $response = mysqli_query($conn, $sql);
 
     //
     $result = array();
-    $result['login'] = array();
-    
-    if ( mysqli_num_rows($response) === 1 ) {
+    $result['load'] = array();
+    if ( mysqli_num_rows($response) > 0 ) {
         
-		$row = mysqli_fetch_assoc($response);
-     
+	       while($row = $response->fetch_assoc()) {
             // $index['driver_lname'] = $row['driver_lname'];
-            $index['driver_email'] = $row['driver_email'];
-            $index['driver_id'] = $row['driver_id'];
+            $index['agency_id'] = $row['agency_id'];
+            $index['agency_name'] = $row['agency_name'];
 
-            array_push($result['login'], $index);
+            array_push($result['load'], $index);
 
+           }
+           
             $result['success'] = "1";
             $result['message'] = "success";
             echo json_encode($result);

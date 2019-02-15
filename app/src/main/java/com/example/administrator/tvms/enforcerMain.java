@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -20,18 +21,18 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enforcer_main);
-
+d
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-//        enforcerSessionManager=new EnforcerSessionManager(this);
-//        enforcerSessionManager.checkLogin();
-//        HashMap<String,String> user= enforcerSessionManager.getUserDetail();
-//        String username=user.get(enforcerSessionManager.ENF_EMAIL);
-//        String id=user.get(enforcerSessionManager.ENF_ID);
-//
-//
+        enforcerSessionManager=new EnforcerSessionManager(this);
+        enforcerSessionManager.checkLogin();
+        HashMap<String,String> user= enforcerSessionManager.getUserDetail();
+        String username=user.get(enforcerSessionManager.ENF_EMAIL);
+        String id=user.get(enforcerSessionManager.ENF_ID);
+
+        Toast.makeText(enforcerMain.this,"Username : "+username +"id" +id ,Toast.LENGTH_SHORT);
 
 
 
@@ -62,10 +63,7 @@ public class enforcerMain extends AppCompatActivity implements NavigationView.On
                 Intent vpIntent = new Intent(this, enforcer_vp_frag.class);
                 startActivity(vpIntent);
                 break;
-//            case R.id.nav_inquire:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new enforcer_inquiry_frag()).commit();
-//                break;
+
             case R.id.nav_eh:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new enforcer_hao_frag()).commit();

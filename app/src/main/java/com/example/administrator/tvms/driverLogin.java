@@ -1,6 +1,5 @@
 package com.example.administrator.tvms;
 
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +30,7 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     EditText username, password;
     Button login;
     TextView log;
-    private static String URL_LOGIN="http://192.168.10.165/tvms/loginDriver.php";
+    private static String URL_LOGIN="http://192.168.1.51/tvms/loginDriver.php";
     DriverSessionManager driverSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,15 +62,15 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
 
             login(username,password);
 
-            startActivity(new Intent(this, driverMain.class));
+
         }
         if(v.getId() == R.id.btn_log_enf){
             startActivity(new Intent(this,enforcerLogin.class));
         }
     }
 
-    private void login(final String username,final  String password) {
-        StringRequest stringRequest =new StringRequest(Request.Method.POST, URL_LOGIN,
+    private void login(final String username, final  String password) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

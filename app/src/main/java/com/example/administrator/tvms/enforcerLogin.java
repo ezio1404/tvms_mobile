@@ -27,7 +27,7 @@ public class enforcerLogin extends AppCompatActivity implements View.OnClickList
 
     EditText username, password;
     Button login;
-    private static String URL_LOGIN="http://localhost:8082/tvms/loginDriver.php";
+    private static String URL_LOGIN="http://192.168.1.51/tvms/loginDriver.php";
     EnforcerSessionManager enforcerSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class enforcerLogin extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.enforcer_login);
         username= findViewById(R.id.username);
         password = findViewById(R.id.password);
-
+        enforcerSessionManager = new EnforcerSessionManager(this);
         login = findViewById(R.id.login);
 
         login.setOnClickListener(this);
@@ -49,8 +49,8 @@ public class enforcerLogin extends AppCompatActivity implements View.OnClickList
             username=this.username.getText().toString().trim();
             password=this.password.getText().toString().trim();
 
-//            login(username,password);
-            startActivity(new Intent(this, enforcerMain.class));
+            login(username,password);
+
         }
     }
 
@@ -61,17 +61,19 @@ public class enforcerLogin extends AppCompatActivity implements View.OnClickList
                     public void onResponse(String response) {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
-                            String success=jsonObject.getString("Success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("Driver login");
+                            String success=jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("login");
                             if(success.equals("1")){
                                 for (int i = 0;i <jsonArray.length();i++){
-                                    String username = jsonObject.getString("driver_email");
-                                    int id = Integer.parseInt(jsonObject.getString("driver_id"));
-                        
+                                        JSONObject object = jsonArray.getJSONObject(i);
+                                    String username = object.getString("enforcer_email").trim();
+                                    int id = object.getInt("enforcer_id");
+                                    Toast.makeText(enforcerLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();
+
                                     enforcerSessionManager.createSession(username,id);
-                                    Intent intent = new Intent(enforcerLogin.this,driverMain.class);
-                                    intent.putExtra("driver_email",username);
-                                    intent.putExtra("driver_id",id);
+                                    Intent intent = new Intent(enforcerLogin.this,enforcerMain.class);
+                                    intent.putExtra("enforcer_email",username);
+                                    intent.putExtra("enforcer_id",id);
                                     startActivity(intent);
                                 }
                             }

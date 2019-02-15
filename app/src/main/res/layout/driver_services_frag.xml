@@ -49,17 +49,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_CTS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Clamping/Towing Services" />
+        <!--<Button-->
+            <!--android:id="@+id/btn_CTS"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Clamping/Towing Services" />-->
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Clamping and towing services." />
+        <!--<TextView-->
+            <!--android:id="@+id/textView11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Clamping and towing services." />-->
     </LinearLayout>
 
     <LinearLayout

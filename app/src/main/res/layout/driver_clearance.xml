@@ -4,6 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Agency: " />
+
+    <Spinner android:id="@+id/spinAgency"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"/>
+
     <EditText
         android:id="@+id/clearance_plateNo"
         android:layout_width="match_parent"
@@ -17,5 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="request clearance" />
+
 
 </LinearLayout>

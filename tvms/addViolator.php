@@ -1,4 +1,5 @@
 <?php
+
 include 'dbconn.php';
      $table = 'violators';
      $fields = array(
@@ -23,5 +24,13 @@ include 'dbconn.php';
 
 	$data=array($driver_id ,$enforcer_id,$violations,$totalFee,$violator_date,$violator_address,$violator_desc,$transaction);
 
-	$status=addRecord($data,$fields,$table);
-	echo json_encode($status);
+    $status=addRecord($data,$fields,$table);
+    if ( $status ) {
+        $result["success"] = "1";
+        $result["message"] = "success";
+        echo json_encode($result);
+    } else {
+        $result["success"] = "0";
+        $result["message"] = "error";
+        echo json_encode($result);
+    }

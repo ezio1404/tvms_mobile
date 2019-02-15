@@ -22,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".enforcer_homepage_frag" />
         <activity android:name=".driverMain" /> <!-- <activity android:name=".driver_inquiry_frag" /> -->
          <activity android:name=".driver_vp_frag" />
          <!--<activity android:name=".driver_settings_frag" /> -->
@@ -42,6 +43,7 @@
         <!-- <activity android:name=".enforcer_inquiry_frag" /> -->
         <activity android:name=".enforcerMain" />
         <activity android:name=".driver_services_frag" />
+
         <activity android:name=".enforcer_services_frag" />
     </application>
 
