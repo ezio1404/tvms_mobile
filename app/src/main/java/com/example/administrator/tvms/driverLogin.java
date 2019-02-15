@@ -30,7 +30,8 @@ public class driverLogin extends AppCompatActivity implements View.OnClickListen
     EditText username, password;
     Button login;
     TextView log;
-    private static String URL_LOGIN="http://192.168.1.51/tvms/loginDriver.php";
+//    private static String URL_LOGIN="http://192.168.1.51/tvms/loginDriver.php";
+    private static String URL_LOGIN="http://192.168.10.165/tvms/loginDriver.php";
     DriverSessionManager driverSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

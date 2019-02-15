@@ -15,9 +15,10 @@
         android:layout_height="wrap_content"
         android:text="Hotlines and offices" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/driver_listview_Hao"
-        />
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/recyclerView">
+
+  </android.support.v7.widget.RecyclerView>
 </LinearLayout>

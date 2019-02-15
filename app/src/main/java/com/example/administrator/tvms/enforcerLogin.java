@@ -65,7 +65,7 @@ public class enforcerLogin extends AppCompatActivity implements View.OnClickList
                             JSONArray jsonArray = jsonObject.getJSONArray("login");
                             if(success.equals("1")){
                                 for (int i = 0;i <jsonArray.length();i++){
-                                        JSONObject object = jsonArray.getJSONObject(i);
+                                    JSONObject object = jsonArray.getJSONObject(i);
                                     String username = object.getString("enforcer_email").trim();
                                     int id = object.getInt("enforcer_id");
                                     Toast.makeText(enforcerLogin.this,"Success Login. \nEmail:"+username,Toast.LENGTH_SHORT).show();

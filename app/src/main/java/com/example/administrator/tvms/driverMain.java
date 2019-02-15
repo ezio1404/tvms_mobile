@@ -76,8 +76,11 @@ public class driverMain extends AppCompatActivity implements NavigationView.OnNa
 //                        new driver_inquiry_frag()).commit();
 //                break;
             case R.id.nav_eh:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new driver_hao_frag()).commit();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                        new driver_hao_frag()).commit();
+                Intent haoIntent = new Intent(this, driver_hao_frag.class);
+                startActivity(haoIntent);
+
                 break;
             case R.id.nav_settings:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
